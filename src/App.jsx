@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./assets/Componentes/Navbar.jsx";
-import Index from "./assets/Componentes/Index.jsx";
+import Inicio from "./assets/Componentes/Index.jsx";
 import Lugares from "./assets/Componentes/Lugares.jsx";
 import Nosotros from "./assets/Componentes/Nosotros.jsx";
 import "./App.css";
@@ -18,7 +18,7 @@ function App() {
         <div>
           <main>
             <Routes>
-              <Route path="/" element={<Index />} />
+              <Route path="/" element={<Inicio />} />
               <Route path="/lugares" element={<Lugares />} />
               <Route path="/nosotros" element={<Nosotros />} />
             </Routes>

@@ -18,7 +18,8 @@ export default defineConfig({
       manifest: {
         name: "PaginaViajes",
         short_name: "PaginaViajes",
-        description: "Página web de Viajes",
+        description:
+          "Desarrollo de la página web de una agencia que promueve el turismo en Colombia.",
         theme_color: "#ffffff",
       },
 
