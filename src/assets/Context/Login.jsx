@@ -3,48 +3,55 @@ import React, { useState } from "react";
 import { auth } from "../Firebase/firebase";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
 import { formValidate } from "../utils/formValidate";
 import { useForm } from "react-hook-form";
+import { erroresFirebase } from "../utils/erroresFirebase";
 
 import FormError from "../Componentes/FormError";
 import FormInput from "../Componentes/FormInput";
 
-const login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const Login = () => {
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors },
   } = useForm();
 
-  const { required, patternEmail, minLength, validateTrim } = formValidate();
+  const { required, patternEmail, validateTrim } = formValidate();
 
-  const Submit = async (e) => {
-    e.preventDefault();
+  const [firebaseError, setFirebaseError] = useState({});
+
+  const onSubmitL = async ({ email, password }) => {
+    console.log("Procesando formulario--->_", email, password);
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("Usuario loggeado Exitosamente!");
+
       navigate("/home");
-      toast.success("User logged in Successfully", {
-        position: "top-center",
-      });
     } catch (error) {
       console.log(error.message);
 
-      toast.error(error.message, {
-        position: "bottom-center",
-      });
+      const customError = erroresFirebase(error.code);
+      setFirebaseError(customError);
+
+      if (customError.code === "password") {
+        setError("password", {
+          type: "manual",
+          message: customError.message,
+        });
+      }
     }
   };
 
   return (
     <>
       <div className="logIn">
-        <form onSubmit={handleSubmit(Submit)}>
+        <form onSubmit={handleSubmit(onSubmitL)}>
           <h3>Login</h3>
 
           <div className="mb-3">
@@ -71,7 +78,6 @@ const login = () => {
               // onChange={(e) => setPassword(e.target.value)}
               {...register("password", {
                 required,
-                minLength,
                 validate: validateTrim,
               })}
               error={errors.password}
@@ -94,4 +100,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

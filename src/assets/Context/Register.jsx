@@ -10,10 +10,28 @@ import FormError from "../Componentes/FormError";
 import FormInput from "../Componentes/FormInput";
 
 const Register = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+
+  const registerUser = async (email, password) => {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const user = userCredential.user;
+
+    // Crear el documento del usuario en Firestore
+    await setDoc(doc(db, "Users", user.uid), {
+      email: user.email,
+      firstName: getValues("fname"),
+      lastName: getValues("lname"),
+    });
+
+    console.log("Usuario Registrado Exitosamente!!");
+  };
 
   const {
     register,
@@ -25,7 +43,16 @@ const Register = () => {
   const { required, patternEmail, minLength, validateTrim, validateEquals } =
     formValidate();
 
-  const handleRegister = async (e) => {
+  const onSubmitR = async ({ email, password }) => {
+    console.log("Procesando formulario--->_", email, password);
+    try {
+      await registerUser(email, password);
+    } catch (error) {
+      console.log(error.message); // Registra cualquier mensaje de error
+    }
+  };
+
+  /*const handleRegister = async (e) => {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
@@ -36,7 +63,6 @@ const Register = () => {
           email: user.email,
           firstName: fname,
           lastName: lname,
-          photo: "",
         });
       }
       console.log("Usuario Registrado Exitosamente!!");
@@ -49,13 +75,13 @@ const Register = () => {
         position: "bottom-center",
       });
     }
-  };
+  };*/
 
   return (
     <>
       <div className="registro">
-        <form onSubmit={handleSubmit(handleRegister)}>
-          <h3>Sign Up</h3>
+        <form onSubmit={handleSubmit(onSubmitR)}>
+          <h3>Registro</h3>
 
           <div className="mb-3">
             <i className="fa-solid fa-user-large"></i>
