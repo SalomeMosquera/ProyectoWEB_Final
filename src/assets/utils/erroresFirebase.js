@@ -1,4 +1,4 @@
-export const erroresFirebase = () => {
+export const erroresFirebase = (code) => {
   switch (code) {
     case "auth/email-already-in-use":
       return {
@@ -20,6 +20,13 @@ export const erroresFirebase = () => {
         code: "password",
         message: "Contraseña incorrecta",
       };
+
+    case "auth/invalid-credential":
+      return {
+        code: "password",
+        message: "Contraseña incorrecta",
+      };
+
     default:
       return {
         code: "email",
