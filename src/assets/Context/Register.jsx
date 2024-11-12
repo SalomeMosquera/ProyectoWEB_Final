@@ -3,12 +3,27 @@ import React, { useState } from "react";
 import { auth, db } from "../Firebase/firebase";
 import { setDoc, doc } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { formValidate } from "../utils/formValidate";
+import { useForm } from "react-hook-form";
+
+import FormError from "../Componentes/FormError";
+import FormInput from "../Componentes/FormInput";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    getValues,
+  } = useForm();
+
+  const { required, patternEmail, minLength, validateTrim, validateEquals } =
+    formValidate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -24,7 +39,7 @@ const Register = () => {
           photo: "",
         });
       }
-      console.log("User Registered Successfully!!");
+      console.log("Usuario Registrado Exitosamente!!");
       toast.success("User Registered Successfully!!", {
         position: "top-center",
       });
@@ -37,61 +52,96 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={handleRegister}>
-      <h3>Sign Up</h3>
+    <>
+      <div className="registro">
+        <form onSubmit={handleSubmit(handleRegister)}>
+          <h3>Sign Up</h3>
 
-      <div className="mb-3">
-        <label>First name</label>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="First name"
-          onChange={(e) => setFname(e.target.value)}
-          required
-        />
-      </div>
+          <div className="mb-3">
+            <i className="fa-solid fa-user-large"></i>
+            <FormInput
+              type="text"
+              // className="form-control"
+              placeholder="Nombre"
+              {...register("fname", { required })}
+              error={errors.fname}
+            >
+              <FormError error={errors.fname} />
+            </FormInput>
+          </div>
 
-      <div className="mb-3">
-        <label>Last name</label>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Last name"
-          onChange={(e) => setLname(e.target.value)}
-        />
-      </div>
+          <div className="mb-3">
+            <i className="fa-solid fa-user-group"></i>
+            <FormInput
+              type="text"
+              // className="form-control"
+              placeholder="Apellido"
+              {...register("lname", { required })}
+              error={errors.lname}
+            >
+              <FormError error={errors.lname} />
+            </FormInput>
+          </div>
 
-      <div className="mb-3">
-        <label>Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          placeholder="Enter email"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
+          <div className="mb-3">
+            <i className="fa-solid fa-envelope"></i>
+            <FormInput
+              type="email"
+              // className="form-control"
+              placeholder="Ingresa tu correo"
+              {...register("email", {
+                required,
+                pattern: patternEmail,
+              })}
+              error={errors.email}
+            >
+              <FormError error={errors.email} />
+            </FormInput>
+          </div>
 
-      <div className="mb-3">
-        <label>Password</label>
-        <input
-          type="password"
-          className="form-control"
-          placeholder="Enter password"
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </div>
+          <div className="mb-3">
+            <i className="fa-solid fa-lock"></i>
+            <FormInput
+              type="password"
+              // className="form-control"
+              placeholder="Contraseña"
+              {...register("password", {
+                required,
+                minLength,
+                validate: validateTrim,
+              })}
+              error={errors.password}
+            >
+              <FormError error={errors.password} />
+            </FormInput>
+          </div>
 
-      <div className="d-grid">
-        <button type="submit" className="btn btn-primary">
-          Sign Up
-        </button>
+          <div className="mb-3">
+            <i className="fa-solid fa-lock"></i>
+            <FormInput
+              type="password"
+              // className="form-control"
+              placeholder="Repite la contraseña"
+              {...register("password2", {
+                validate: validateEquals(getValues("password")),
+              })}
+              error={errors.password2}
+            >
+              <FormError error={errors.password2} />
+            </FormInput>
+          </div>
+
+          <div className="d-grid">
+            <button type="submit" className="btn btn-primary">
+              Registrate
+            </button>
+          </div>
+          <p className="register-text text-right">
+            ¿Ya tienes cuenta? <a href="/login">Login</a>
+          </p>
+        </form>
       </div>
-      <p className="forgot-password text-right">
-        Already registered <a href="/login">Login</a>
-      </p>
-    </form>
+    </>
   );
 };
 
