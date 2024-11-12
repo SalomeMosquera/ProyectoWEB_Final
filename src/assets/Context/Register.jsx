@@ -5,6 +5,7 @@ import { setDoc, doc } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { formValidate } from "../utils/formValidate";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 import FormError from "../Componentes/FormError";
 import FormInput from "../Componentes/FormInput";
@@ -14,6 +15,7 @@ const Register = () => {
   // const [password, setPassword] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
+  const navigate = useNavigate();
 
   const registerUser = async (email, password) => {
     const userCredential = await createUserWithEmailAndPassword(
@@ -47,6 +49,7 @@ const Register = () => {
     console.log("Procesando formulario--->_", email, password);
     try {
       await registerUser(email, password);
+      navigate("/LogIn");
     } catch (error) {
       console.log(error.message); // Registra cualquier mensaje de error
     }
@@ -88,7 +91,7 @@ const Register = () => {
             <FormInput
               type="text"
               // className="form-control"
-              placeholder="Nombre"
+              placeholder="Primer nombre"
               {...register("fname", { required })}
               error={errors.fname}
             >

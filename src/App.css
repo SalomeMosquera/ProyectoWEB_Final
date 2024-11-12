@@ -202,7 +202,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  height: 5rem;
+  height: 4.5rem;
   background-color: #034574;
 }
 /*#039fc2*/
@@ -224,7 +224,7 @@ nav h3 {
 }
 
 nav img {
-  width: 2.8rem;
+  width: 2.5rem;
   height: auto;
 }
 
@@ -256,8 +256,57 @@ a:hover {
 }
 
 .active {
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
   border-bottom: solid 3px #ffd600;
+}
+
+.carga-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  height: 4.5rem;
+  background-color: #034574;
+  color: white;
+}
+
+/*Usuario y botón LogOut*/
+.btn-logOut {
+  position: absolute;
+  display: flex;
+  font-size: 1.1rem;
+  justify-self: center;
+  align-items: center;
+  padding: 0.5rem;
+  height: 2.2rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0.5rem 0.3rem 0.5rem 0rem rgba(0, 0, 0, 0.3);
+  color: black;
+  background-color: #ffffff;
+  top: 1.15rem;
+  right: 1.8rem;
+}
+
+.btn-logOut:hover {
+  background-color: #ff2525;
+  color: white;
+}
+
+.btn-logOut i {
+  margin-left: 0.5rem;
+}
+
+nav li h1 {
+  margin-top: 0.56rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: 3rem;
+  background-color: #002744be;
+  padding: 0.8rem 3.5rem 0.7rem 1rem;
+  border-radius: 1rem 0.3rem 0.3rem 1rem;
+  min-width: 12rem;
 }
 
 div {
@@ -291,12 +340,6 @@ div {
   color: #f4f4f4;
   background-color: #333;
 }
-/*
-button[class^="btn-"]:hover,
-a[class^="btn-"]:hover,
-input[class^="btn-"]:hover {
-  background-color: #ffbc00;
-}*/
 
 .lead {
   font-size: 1.4rem;
@@ -674,18 +717,6 @@ img {
   font-size: 1rem;
   padding: 0.5rem 3rem;
 }
-
-/*
-#home-3 .process-icon:hover {
-  background: #ffbc00;
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
-}
-#home-3 .process-icon:hover .process-step {
-  background-color: #333;
-  color: #fff;
-}*/
 
 /* Footer */
 #main-footer {
