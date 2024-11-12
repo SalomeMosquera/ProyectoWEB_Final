@@ -25,6 +25,178 @@ body {
   background-color: #fff;
 }
 
+/*Log-In*/
+.logIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #94cef8;
+  width: 100%;
+  height: 100vh;
+}
+
+.logIn form {
+  width: 100%;
+  max-width: 30rem;
+  padding: 3rem;
+  margin: 0rem 1rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0rem 0.6rem 1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.logIn form h3 {
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: #034574;
+  margin-bottom: 1.5rem;
+}
+
+.logIn form .input-correcto {
+  width: 85%;
+  margin: 1.3rem 0rem;
+  border: none;
+  border-bottom: 2px solid #034574;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
+.logIn form .input-correcto:hover {
+  background-color: #e0eef8;
+  border-radius: 0.2rem;
+}
+
+.mb-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #034574;
+}
+
+.mb-3 i {
+  margin-right: 0rem;
+  width: 1.5rem;
+}
+
+.logIn form button {
+  background-color: #034574;
+  border-color: #034574;
+  margin: 1.2rem 0rem;
+  font-size: 1.2rem;
+}
+
+.logIn form button:hover {
+  background-color: #006dbb;
+  border-color: #006dbb;
+}
+
+.register-text {
+  color: #676767;
+}
+.register-text a {
+  color: #676767;
+}
+
+/*Registro*/
+.registro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #94cef8;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.registro form {
+  width: 100%;
+  max-width: 30rem;
+  margin: 3rem 2rem 6rem 1rem;
+  padding: 2.2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0rem 0.6rem 1rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.registro form h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #034574;
+  margin-bottom: 0.4rem;
+}
+
+.registro form .input-correcto {
+  width: 85%;
+  padding-left: 0.25rem;
+  margin: 0.6rem 0rem;
+  border: none;
+  border-bottom: 2px solid #034574;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
+.registro form .input-correcto:hover {
+  background-color: #e0eef8;
+  border-radius: 0.2rem;
+}
+
+.mb-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #034574;
+}
+
+.registro form button {
+  background-color: #034574;
+  border-color: #034574;
+  margin: 1rem 0rem;
+  font-size: 1.2rem;
+}
+
+.registro form button:hover {
+  background-color: #006dbb;
+  border-color: #006dbb;
+}
+
+/*Validaciones*/
+.error-text {
+  color: red;
+  font-size: 1rem;
+}
+
+.logIn form .input-error {
+  width: 85%;
+  padding-left: 0.25rem;
+  margin: 0.6rem 0rem;
+  border: none;
+  border-radius: 0;
+  font-size: 1rem;
+  background-color: rgb(255, 201, 201);
+  border-bottom: 2px solid #930000;
+}
+.registro form .input-error {
+  width: 85%;
+  padding-left: 0.25rem;
+  margin: 0.6rem 0rem;
+  border: none;
+  border-radius: 0;
+  font-size: 1rem;
+  background-color: rgb(255, 201, 201);
+  border-bottom: 2px solid #930000;
+}
+
+.logIn form .input-error:hover {
+  background-color: rgb(255, 152, 152);
+}
+
+.registro form .input-error:hover {
+  background-color: rgb(255, 152, 152);
+}
+
 .fixed {
   width: 100%;
   display: flex;
