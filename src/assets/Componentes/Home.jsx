@@ -47,8 +47,10 @@ const Home = () => {
                   </i>
                   <h3>Actividades culturales</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                    eveniet, rerum officia dolorem omnis ut.
+                    Vive la tradición y diversidad de Colombia a través de
+                    festivales, bailes típicos, y la calidez de su gente, que
+                    hacen de cada rincón un espacio único lleno de cultura y
+                    color.
                   </p>
                 </div>
                 <div>
@@ -57,8 +59,9 @@ const Home = () => {
                   </i>
                   <h3>Centros históricos</h3>
                   <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Perferendis illo adipisci delectus illum hic non?
+                    Recorre las calles empedradas de los pueblos más
+                    emblemáticos, rodeado de arquitectura colonial, historias
+                    fascinantes y paisajes que cuentan el pasado de Colombia.
                   </p>
                 </div>
                 <div>
@@ -67,8 +70,9 @@ const Home = () => {
                   </i>
                   <h3>Lugares relajantes</h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quod dolor commodi, quam quis veritatis recusandae.
+                    Relájate en playas paradisíacas, majestuosos parques
+                    naturales y destinos que ofrecen tranquilidad y conexión con
+                    la naturaleza.
                   </p>
                 </div>
                 <div>
@@ -77,9 +81,9 @@ const Home = () => {
                   </i>
                   <h3>Experiencias Inolvidables</h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Laboriosam perferendis excepturi, similique dolorem velit
-                    voluptatibus.
+                    Déjate sorprender por paisajes únicos, culturas vibrantes y
+                    aventuras que te harán sentir vivo. Colombia te espera con
+                    momentos que quedarán grabados en tu corazón para siempre.
                   </p>
                 </div>
               </div>
@@ -130,8 +134,8 @@ const Home = () => {
               <h2 className="section-title">Descubre Lugares maravillosos</h2>
               <div className="bottom-line" />
               <p className="lead">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non,
-                sapiente. Excepturi facere sed praesentium libero?
+                Colombia es un país lleno de contrastes que enamoran. Ven y
+                descubre lugares que te dejarán sin aliento.
               </p>
               <div className="cards">
                 <div className="card">
@@ -143,8 +147,9 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Caño Cristales</h5>
                     <p className="card-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Eius quas qui sint vitae. Veniam, itaque.
+                      Conocido como "el río de los cinco colores", este
+                      increíble destino en la Sierra de la Macarena te ofrece
+                      paisajes únicos que parecen sacados de otro mundo.
                     </p>
                     <a href="#" className="btn btn-card">
                       Más información
@@ -160,8 +165,9 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Desierto de la Tatacoa</h5>
                     <p className="card-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Eius quas qui sint vitae. Veniam, itaque.
+                      Explora el misterioso paisaje de uno de los desiertos más
+                      icónicos de Colombia, donde la naturaleza y la astronomía
+                      se encuentran en un espectáculo inolvidable.
                     </p>
                     <a href="#" className="btn btn-card">
                       Más información
@@ -177,8 +183,9 @@ const Home = () => {
                   <div className="card-body">
                     <h5 className="card-title">Amazonas</h5>
                     <p className="card-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Eius quas qui sint vitae. Veniam, itaque.
+                      Adéntrate en el corazón de la selva amazónica y descubre
+                      su riqueza natural, biodiversidad única, y la conexión con
+                      comunidades indígenas ancestrales.
                     </p>
                     <a href="#" className="btn btn-card">
                       Más información

@@ -4,6 +4,7 @@ import Navbar from "./assets/Componentes/Navbar.jsx";
 import Inicio from "./assets/Componentes/Home.jsx";
 import Lugares from "./assets/Componentes/Lugares.jsx";
 import Nosotros from "./assets/Componentes/Nosotros.jsx";
+import InfoPlanes from "./assets/Componentes/InfoPlanes.jsx";
 import "./App.css";
 
 import Login from "./assets/Context/login.jsx";
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/home" element={<Inicio />} />
                 <Route path="/lugares" element={<Lugares />} />
                 <Route path="/nosotros" element={<Nosotros />} />
+                <Route path="/infoPlanes/:nombre" element={<InfoPlanes />} />
               </Routes>
             </div>
           </div>
@@ -35,25 +37,6 @@ function App() {
           </footer>
         </div>
       </Router>
-
-      {/*<Router>
-        {" "}
-        <Navbar />
-        <div>
-          <main>
-            <Routes>
-              <Route path="/" element={<Inicio />} />
-              <Route path="/lugares" element={<Lugares />} />
-              <Route path="/nosotros" element={<Nosotros />} />
-            </Routes>
-          </main>
-
-          <footer id="main-footer">
-            <p>Copyright &copy; 2024. Todos los Derechos Reservados</p>
-            <p>EXPLORANDO ANDO</p>
-          </footer>
-        </div>
-      </Router>*/}
     </>
   );
 }
