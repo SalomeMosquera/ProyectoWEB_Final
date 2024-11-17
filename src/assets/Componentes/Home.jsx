@@ -28,15 +28,17 @@ const Home = () => {
         <>
           <section id="home-1" className="text-center py-2">
             <div className="container">
-              <h2 className="section-title">¿Qué podrás encontrar?</h2>
+              <h2 className="section-title">
+                ¿Estás listo para vivir experiencias inolvidables?
+              </h2>
               <div className="bottom-line" />
               <p className="lead">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
-                rem vitae maxime, architecto ut, inventore praesentium suscipit
-                molestias mollitia error similique corporis nesciunt, atque
-                corrupti. Neque ab iste eum dignissimos dolore aperiam inventore
-                voluptatem quidem et totam id, nihil esse quasi tempore iusto
-                quo iure nobis rem eius ducimus. Reiciendis.
+                Colombia, con su riqueza cultural, natural e histórica, ofrece
+                una gran variedad de destinos que te dejarán maravillado. Desde
+                los imponentes paisajes de los Andes hasta las cálidas costas
+                del Caribe, pasando por la magia de la Amazonía y la
+                arquitectura colonial de sus pueblos, aquí encontrarás el plan
+                perfecto para cada tipo de viajero.
               </p>
               <div className="process">
                 <div>
@@ -134,12 +136,12 @@ const Home = () => {
               <div className="cards">
                 <div className="card">
                   <img
-                    src="https://www.lacasadejeronimo.com/wp-content/uploads/2014/10/vallecocora_003.jpg"
+                    src="https://cdn0.matrimonio.com.co/article/8185/original/1280/jpg/35818-shutterstock-371459737.jpeg"
                     className="card-img-top"
                     alt="..."
                   />
                   <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
+                    <h5 className="card-title">Caño Cristales</h5>
                     <p className="card-text">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Eius quas qui sint vitae. Veniam, itaque.
@@ -151,12 +153,12 @@ const Home = () => {
                 </div>
                 <div className="card">
                   <img
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfdR-kMLc4Ombn3Vw_Fqqv0nCKlCJbYqLRTEsxvoy4fGi3WVW7pOOqa6GDG6rVdheTZD4-IhWkr5FHCCComDPgEW6QXKkKox0uCzGmQmnOG80jb6GbCKUqxPrjkwdt7p0fVaDJMt64eMAo/w1200-h630-p-k-no-nu/DSC03970.png"
+                    src="https://aventurecolombia.com/wp-content/uploads/2021/03/Desert-de-Tatacoa-%C2%A9-tristan-quevilly.jpg"
                     className="card-img-top"
                     alt="..."
                   />
                   <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
+                    <h5 className="card-title">Desierto de la Tatacoa</h5>
                     <p className="card-text">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Eius quas qui sint vitae. Veniam, itaque.
@@ -168,12 +170,12 @@ const Home = () => {
                 </div>
                 <div className="card">
                   <img
-                    src="https://reserva-guadalajara.hotelesejecafetero.net/data/Images/OriginalPhoto/6104/610436/610436588/image-salento-reserva-guadalajara-90.JPEG"
+                    src="https://www.colombiatudestino.com/image/wJ4p8bwGNQdzXqa0PQhNO89mhZUKNJiegj4H2FPM.jpeg"
                     className="card-img-top"
                     alt="..."
                   />
                   <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
+                    <h5 className="card-title">Amazonas</h5>
                     <p className="card-text">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Eius quas qui sint vitae. Veniam, itaque.
