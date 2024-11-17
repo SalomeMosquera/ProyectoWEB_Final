@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
 
 function Lugares() {
+  const navigate = useNavigate();
+
+  const handleItemClick = (nombre) => {
+    navigate(`/infoPlanes/${nombre}`);
+  };
+
   return (
     <>
       <Navbar />
@@ -20,7 +27,10 @@ function Lugares() {
             </p>
             {/* Galería de items */}
             <div className="items">
-              <div className="item">
+              <div
+                className="item"
+                onClick={() => handleItemClick("Cartagena de Indias")}
+              >
                 <div className="item-image">
                   <img
                     src="https://www.viajes.cl/hubfs/Torre%20del%20Reloj%20en%20Cartagena%20de%20Indias,%20Colombia.jpg"
@@ -36,7 +46,10 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div
+                className="item"
+                onClick={() => handleItemClick("Eje Cafetero")}
+              >
                 <div className="item-image">
                   <img
                     src="https://turismounipolar.com/wp-content/uploads/2022/04/Torre-Mirador-eje-cafetero.jpg
@@ -51,7 +64,10 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div
+                className="item"
+                onClick={() => handleItemClick("El Amazonas")}
+              >
                 <div className="item-image">
                   <img
                     src="https://www.colombiatudestino.com/image/wJ4p8bwGNQdzXqa0PQhNO89mhZUKNJiegj4H2FPM.jpeg"
@@ -65,7 +81,7 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div className="item" onClick={() => handleItemClick("Guatapé")}>
                 <div className="item-image">
                   <img
                     src="https://raw.githubusercontent.com/JhamG9/api-viaja/main/uploads/guatape/piedra-guatape.webp"
@@ -81,7 +97,10 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div
+                className="item"
+                onClick={() => handleItemClick("San Andrés")}
+              >
                 <div className="item-image">
                   <img
                     src="https://media.staticontent.com/media/pictures/2380f5a2-aa34-4205-870a-491b95f3cb8b"
@@ -97,7 +116,10 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div
+                className="item"
+                onClick={() => handleItemClick("Caño Cristales")}
+              >
                 <div className="item-image">
                   <img
                     src="https://cdn0.matrimonio.com.co/article/8185/original/1280/jpg/35818-shutterstock-371459737.jpeg"
@@ -111,7 +133,7 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div className="item" onClick={() => handleItemClick("Medellín")}>
                 <div className="item-image">
                   <img
                     src="https://wander-lush.org/wp-content/uploads/2018/11/Emily-Lush-Comuna-13-HERO-V2-11.jpg"
@@ -125,7 +147,10 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div
+                className="item"
+                onClick={() => handleItemClick("Desierto de la Tatacoa")}
+              >
                 <div className="item-image">
                   <img
                     src="https://aventurecolombia.com/wp-content/uploads/2021/03/Desert-de-Tatacoa-%C2%A9-tristan-quevilly.jpg"
@@ -141,7 +166,10 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item">
+              <div
+                className="item"
+                onClick={() => handleItemClick("Santa Marta")}
+              >
                 <div className="item-image">
                   <img
                     src="https://media.staticontent.com/media/pictures/ec5a302c-5aaf-4708-aaf3-9a7a4cd691c0 "

@@ -22,15 +22,16 @@ function Nosotros() {
               <div className="bio">
                 <h4>Tu Viaje Está en Buenas Manos</h4>
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
-                  deleniti laborum voluptas veniam quas iusto eaque sapiente ab.
-                  Praesentium, explicabo laborum minus nam a provident. Lorem
-                  ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
-                  deleniti laborum voluptas veniam quas iusto eaque sapiente ab.
-                  Praesentium, explicabo laborum minus nam a provident. Lorem
-                  ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
-                  deleniti laborum voluptas veniam quas iusto eaque sapiente ab.
-                  Praesentium, explicabo laborum minus nam a provident.
+                  Explorar Colombia no es solo un viaje, es una experiencia
+                  transformadora que despierta todos tus sentidos. En ExplorAndo
+                  Agency, estamos dedicados a diseñar aventuras únicas que
+                  conecten a los viajeros con la esencia de nuestro país.
+                  Nuestro equipo de expertos en turismo y cultura local trabaja
+                  incansablemente para garantizar que cada experiencia esté
+                  llena de autenticidad, seguridad y comodidad. Más que planear
+                  viajes, creamos recuerdos que duran para toda la vida. ¡Confía
+                  en nosotros para descubrir lo mejor de Colombia y vivir un
+                  viaje lleno de magia y descubrimientos!
                 </p>
               </div>
               <div className="reconocimiento award-1">
