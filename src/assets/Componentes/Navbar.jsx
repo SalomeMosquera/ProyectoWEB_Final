@@ -52,7 +52,7 @@ function Navbar() {
                   Inicio
                 </NavLink>
                 <NavLink to="/lugares" activeclassname="active">
-                  Lugares
+                  Planes
                 </NavLink>
                 <NavLink to="/nosotros" activeclassname="active">
                   Nosotros
@@ -87,7 +87,7 @@ function Navbar() {
                   Inicio
                 </NavLink>
                 <NavLink to="/lugares" activeclassname="active">
-                  Lugares
+                  Planes
                 </NavLink>
                 <NavLink to="/nosotros" activeclassname="active">
                   Nosotros
