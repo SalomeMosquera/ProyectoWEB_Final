@@ -44,10 +44,10 @@ function Navbar() {
               <li>
                 <img className="logo" src="./Img/avion.png" alt="" />
               </li>
-              <li>ExplorandoAndo</li>
+              <li className="pag-name">ExplorandoAndo</li>
             </ul>
             <ul>
-              <li>
+              <li className="apartados">
                 <NavLink to="/home" activeclassname="active">
                   Inicio
                 </NavLink>
@@ -64,11 +64,19 @@ function Navbar() {
                 </li>
                 <li>
                   <button className="btn-logOut" onClick={handlleLogout}>
-                    Log Out
+                    <span>Log Out</span>
                     <i className="fa-solid fa-right-from-bracket"></i>
                   </button>
                 </li>
               </div>
+              <button className="menu-btn">
+                <span
+                  className={"material-symbols-outlined"}
+                  style={{ fontSize: "1.8rem" }}
+                >
+                  menu
+                </span>
+              </button>
             </ul>
           </nav>
         </div>
@@ -79,10 +87,10 @@ function Navbar() {
               <li>
                 <img className="logo" src="./Img/avion.png" alt="" />
               </li>
-              <li>ExplorandoAndo</li>
+              <li className="pag-name">ExplorandoAndo</li>
             </ul>
             <ul>
-              <li>
+              <li className="apartados">
                 <NavLink to="/home" activeclassname="active">
                   Inicio
                 </NavLink>
@@ -99,7 +107,7 @@ function Navbar() {
                 </li>
                 <li>
                   <button className="btn-logOut" onClick={handlleLogout}>
-                    Log Out
+                    <span>Log Out</span>
                     <i className="fa-solid fa-right-from-bracket"></i>
                   </button>
                 </li>
