@@ -81,7 +81,10 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item" onClick={() => handleItemClick("Guatapé")}>
+              <div
+                className="item"
+                onClick={() => handleItemClick("El Guatapé")}
+              >
                 <div className="item-image">
                   <img
                     src="https://raw.githubusercontent.com/JhamG9/api-viaja/main/uploads/guatape/piedra-guatape.webp"
@@ -133,7 +136,10 @@ function Lugares() {
                   </div>
                 </div>
               </div>
-              <div className="item" onClick={() => handleItemClick("Medellín")}>
+              <div
+                className="item"
+                onClick={() => handleItemClick("El Medellín")}
+              >
                 <div className="item-image">
                   <img
                     src="https://wander-lush.org/wp-content/uploads/2018/11/Emily-Lush-Comuna-13-HERO-V2-11.jpg"

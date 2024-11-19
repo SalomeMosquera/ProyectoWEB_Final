@@ -55,31 +55,6 @@ const Register = () => {
     }
   };
 
-  /*const handleRegister = async (e) => {
-    e.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      const user = auth.currentUser;
-      console.log(user);
-      if (user) {
-        await setDoc(doc(db, "Users", user.uid), {
-          email: user.email,
-          firstName: fname,
-          lastName: lname,
-        });
-      }
-      console.log("Usuario Registrado Exitosamente!!");
-      toast.success("User Registered Successfully!!", {
-        position: "top-center",
-      });
-    } catch (error) {
-      console.log(error.message);
-      toast.error(error.message, {
-        position: "bottom-center",
-      });
-    }
-  };*/
-
   return (
     <>
       <div className="registro">
