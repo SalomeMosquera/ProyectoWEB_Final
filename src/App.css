@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Configuración de color de texto */
 .container {
   max-width: 100%;
@@ -731,10 +732,22 @@ nav li h1 {
 }
 
 /*Pág-Planes*/
+.infoPlanes .active {
+  border: none;
+}
+
+.infoPlanes nav {
+  margin-top: 0.5rem;
+}
+
+.infoPlanes a {
+  color: #0362fb;
+  margin: 0;
+}
 
 .containerPlanes {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 0rem;
 }
 
 .plan {
@@ -744,16 +757,33 @@ nav li h1 {
 }
 
 .carousel {
-  max-width: 35rem;
+  max-width: 40rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1;
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+  width: 3rem;
+  background-color: #000000a8;
+  border-radius: 3rem;
+  padding: 0.5rem;
 }
 
 .carousel-inner img {
   width: 100%;
   height: 25rem;
+  border-radius: 1rem;
 }
+
 .infoPlanes h1 {
   text-align: left;
-  padding-left: 0.5rem;
+  padding-left: 0.2rem;
+  font-size: 2.2rem;
+  margin-top: 1rem;
 }
 
 .info-adicional ul {
@@ -762,8 +792,16 @@ nav li h1 {
   justify-content: space-between;
   align-content: center;
 }
-.infoPlanes .active {
-  border: none;
+
+.info-adicional h4 {
+  text-transform: none;
+  color: gray;
+  margin: 0;
+}
+
+.info-adicional p {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .top-line {
@@ -776,7 +814,7 @@ nav li h1 {
 
 .compra {
   padding: 0rem 2rem;
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   width: 30%;
   margin: 0rem 2rem 2rem 2rem;
   background-color: #f4f4f4;
@@ -821,7 +859,7 @@ nav li h1 {
   display: flex;
   justify-content: space-between; /* Esto separa los elementos en los extremos */
   align-items: center;
-  margin: 1.5rem 0rem;
+  margin: 1rem 0rem;
 }
 
 .btn-operacion {
@@ -848,7 +886,7 @@ nav li h1 {
 .compra form .btn {
   background-color: #034574;
   border-color: #034574;
-  margin: 1.2rem 0rem;
+  margin: 1rem 0rem;
   font-size: 1.2rem;
 }
 
@@ -870,6 +908,111 @@ nav li h1 {
   height: 2rem;
   margin: 0.5rem;
 }
+
+.infoPlanes {
+  padding: 0 3rem;
+}
+
+.descripcion {
+  text-align: justify;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  background-color: #def1fe;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.descripcion p {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.descripcion h1,
+.accordion h1,
+.titulo-itinerario {
+  font-size: 2rem;
+}
+
+.line {
+  height: 1.2px;
+  width: 100%;
+  background: #ffd600;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.juntos {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.juntos ul {
+  margin-right: 4rem;
+  padding: 0;
+}
+
+.incluido-excluido {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.incluido-excluido ul {
+  padding: 0 1rem;
+  margin-right: 0;
+}
+
+.incluido-excluido li {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  width: 20rem;
+}
+
+.incluido i {
+  margin-right: 0.5rem;
+  color: green;
+  font-size: 1.5rem;
+}
+
+.excluido i {
+  margin-right: 0.5rem;
+  color: red;
+  font-size: 1.5rem;
+}
+
+.excluido p,
+.incluido p {
+  margin-top: -0.1rem;
+  text-align: left;
+}
+
+.accordion {
+  width: 40rem;
+  margin-bottom: 3rem;
+}
+
+.accordion h1 {
+  margin-bottom: 1.5rem;
+}
+
+.accordion button {
+  font-size: 1.1rem;
+  margin-bottom: -0.3rem;
+  border: 3px solid #81c6f8;
+}
+
+.accordion button span {
+  color: #034574;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.accordion-body {
+  text-align: justify;
+}
+
 /*Nosotros*/
 
 #about-a .about-info {
