@@ -747,6 +747,7 @@ nav li h1 {
 
 .containerPlanes {
   display: flex;
+
   margin-top: 0rem;
 }
 
@@ -1161,6 +1162,8 @@ nav li h1 {
 /*Responsive*/
 
 @media (max-width: 2560px) {
+  /*Nosotros*/
+
   .testimonials div {
     justify-items: center;
     align-items: center;
@@ -1180,9 +1183,6 @@ nav li h1 {
   /*Pantalla + grande*/
 
   /*Navbar*/
-  .fixed {
-    background-color: rgb(0, 0, 0);
-  }
 
   .fixed {
     width: 100%;
@@ -1303,6 +1303,28 @@ nav li h1 {
     margin-right: 0.5rem;
   }
 
+  /*Pág Planes*/
+  .juntos ul {
+    margin-right: 10rem;
+  }
+
+  .accordion {
+    width: 60rem;
+    margin-bottom: 3rem;
+  }
+
+  .descripcion h1,
+  .accordion h1,
+  .infoPlanes h1,
+  .titulo-itinerario {
+    font-size: 3rem;
+  }
+
+  .incluido-excluido ul {
+    padding: 0 1rem;
+    margin-right: 0;
+  }
+
   /*Footer*/
   #main-footer {
     height: 10rem;
@@ -1317,9 +1339,6 @@ nav li h1 {
 @media (max-width: 1440px) {
   /*Casi que normal*/
   /*Navbar*/
-  .fixed {
-    background-color: rgb(158, 158, 158);
-  }
 
   /*Home*/
 
@@ -1364,13 +1383,24 @@ nav li h1 {
   .testimonials p {
     width: 18rem;
   }
+
+  /*Pág planes*/
+  /* .juntos ul {
+    margin-right: 2rem;
+  } */
+
+  .incluido-excluido ul {
+    padding: 0rem;
+  }
+
+  .accordion {
+    width: 36rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 1325px) {
-  .fixed {
-    background-color: red;
-  }
-
   /*Home*/
 
   /*Planes*/
@@ -1391,6 +1421,77 @@ nav li h1 {
   #contact-b .contact-info h3 {
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
+  }
+
+  /*Pág Planes*/
+  .plan {
+    padding: 0rem 1rem;
+    /* width: 55%; */
+    margin: 0rem;
+  }
+
+  .infoPlanes {
+    padding: 0rem 1rem;
+  }
+
+  .infoPlanes a {
+    padding-left: 1rem;
+  }
+
+  .compra {
+    padding: 0rem 1.5rem;
+    padding-top: 1.5rem;
+    width: 32%;
+    margin: 0rem 0.8rem 2rem 1rem;
+  }
+
+  .form-compra {
+    font-size: 1rem;
+  }
+
+  .form-compra label {
+    margin-bottom: 0rem;
+  }
+
+  .form-compra h2 {
+    font-size: 1rem;
+  }
+
+  .form-compra h3 {
+    font-size: 1rem;
+  }
+  .form-compra h4 {
+    font-size: 1.2rem;
+  }
+
+  .operacion h2 {
+    font-size: 1rem;
+  }
+
+  .juntos {
+    flex-direction: column;
+  }
+  .juntos ul {
+    margin-left: 3rem;
+  }
+
+  .accordion {
+    width: 40rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+  }
+
+  .descripcion h1,
+  .accordion h1,
+  .infoPlanes h1,
+  .titulo-itinerario {
+    font-size: 2rem;
+  }
+
+  .incluido-excluido ul {
+    padding: 0 1rem;
+    margin-right: 0;
+    margin-left: 1rem;
   }
 }
 
@@ -1431,9 +1532,6 @@ nav li h1 {
 }
 
 @media (max-width: 900px) {
-  .fixed {
-    background-color: #034574;
-  }
   /*Navbar*/
   nav ul {
     margin: 0;
@@ -1500,13 +1598,39 @@ nav li h1 {
     margin: 3rem 0;
     gap: 1rem;
   }
+
+  /*Pág planes*/
+  .containerPlanes {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .plan {
+    width: 90%;
+  }
+
+  .compra {
+    width: 90%;
+  }
+
+  .incluido-excluido {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .incluido-excluido ul {
+    margin-top: 1rem;
+    justify-items: flex-start;
+  }
+
+  .incluido-excluido li {
+    width: 100%;
+  }
 }
 @media (max-width: 769px) {
   /*Navbar*/
 
-  .fixed {
-    background-color: green;
-  }
   nav .pag-name {
     font-size: 1rem;
   }
@@ -1548,22 +1672,31 @@ nav li h1 {
     display: show;
   }
 
+  .hamburger-menu {
+    position: fixed;
+    top: 70px; /* Ajusta según la altura de tu navbar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px 0;
+  }
+
+  .hamburger-menu a {
+    margin: 10px 0;
+    text-decoration: none;
+    color: #002744;
+    font-size: 1.2rem;
+  }
+
   /*Home*/
   #header-home .header-content {
     padding: 15%;
   }
-  /*#home-1 .process {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 1.5rem;
-  }
-
-  #home-2 .stats {
-    display: grid;
-    color: #012f7a;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
-  }*/
 
   .cards {
     display: flex;
@@ -1599,9 +1732,163 @@ nav li h1 {
   #contact-b .contact-info p {
     font-size: 0.7rem;
   }
+
+  /*Pág planes*/
+
+  .plan h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-inner img {
+    height: 18rem;
+  }
+
+  .info-adicional ul {
+    padding: 0;
+  }
+
+  .info-adicional h4 {
+    font-size: 1rem;
+  }
+
+  .info-adicional p {
+    font-size: 0.8rem;
+  }
+
+  .compra {
+    padding: 0rem 1.5rem;
+    padding-top: 1.5rem;
+    width: 32%;
+    margin: 0rem 0.8rem 2rem 1rem;
+  }
+
+  .form-compra {
+    font-size: 1rem;
+  }
+
+  .compra h3 {
+    font-size: 1.2rem;
+  }
+
+  .compra span {
+    font-size: 0.8rem;
+  }
+
+  .ticket h4 {
+    font-size: 5rem;
+  }
+
+  .form-compra input {
+    height: 1.8rem;
+  }
+
+  .form-compra h2 {
+    font-size: 1rem;
+  }
+
+  .form-compra h3 {
+    font-size: 1rem;
+  }
+  .form-compra h4 {
+    font-size: 1.2rem;
+  }
+
+  .juntos ul {
+    padding: 0 1rem;
+    margin: 0;
+  }
+
+  .compra {
+    width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
+  /*Log-In*/
+
+  .logIn form {
+    width: 100%;
+    max-width: 20rem;
+    padding: 2rem;
+    margin: 0rem 0.3rem;
+  }
+  .logIn form .input-correcto {
+    margin: 0.6rem 0rem;
+    font-size: 0.8rem;
+  }
+
+  .logIn form h3 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .register-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+  }
+
+  .register-text a {
+    font-size: 0.8rem;
+  }
+
+  .logIn form button {
+    margin: 0.4rem 0rem;
+    font-size: 1rem;
+  }
+
+  /*Registro*/
+  .registro {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .registro form {
+    width: 100%;
+    max-width: 20rem;
+    margin: 3rem 2rem 6rem 2rem;
+    padding: 2rem;
+  }
+
+  .registro form h3 {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .registro form .input-correcto {
+    width: 85%;
+    padding-left: 0.25rem;
+    margin: 0.6rem 0rem;
+    font-size: 0.8rem;
+  }
+
+  .mb-3 {
+    font-size: 1.3rem;
+  }
+
+  .registro form button {
+    margin: 0.4rem 0rem;
+    font-size: 1rem;
+  }
+
+  /*Validaciones*/
+  .error-text {
+    font-size: 0.8rem;
+  }
+
+  .logIn form .input-error {
+    width: 85%;
+    padding-left: 0.25rem;
+    margin: 0.6rem 0rem;
+    font-size: 0.8rem;
+  }
+  .registro form .input-error {
+    width: 85%;
+    padding-left: 0.25rem;
+    margin: 0.6rem 0rem;
+    font-size: 0.8rem;
+  }
+
   /*Home*/
   #header-home .header-content {
     padding: 20%;
@@ -1628,10 +1915,74 @@ nav li h1 {
 }
 
 @media (max-width: 400px) {
-  /*Navbar*/
-  .fixed {
-    background-color: purple;
+  /*Log-In*/
+
+  .logIn form {
+    width: 100%;
+    max-width: 16rem;
+    padding: 1.5rem;
+    margin: 0rem 0.2rem;
   }
+  .logIn form .input-correcto {
+    margin: 0.4rem 0rem;
+    margin-bottom: 0.2rem;
+    font-size: 0.7rem;
+  }
+
+  .logIn form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .register-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+  }
+
+  .register-text a {
+    font-size: 0.7rem;
+  }
+
+  .logIn form button {
+    margin: 0.4rem 0rem;
+    margin-top: 0rem;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+
+  /*Registro*/
+  .registro form {
+    width: 100%;
+    max-width: 16rem;
+    margin: 3rem 2rem 6rem 2rem;
+    padding: 1.5rem;
+  }
+
+  .registro form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .registro form .input-correcto {
+    width: 85%;
+    padding-left: 0.25rem;
+    margin: 0.4rem 0rem;
+    font-size: 0.7rem;
+  }
+
+  .mb-3 {
+    font-size: 1.2rem;
+    margin-left: 0rem;
+  }
+
+  .registro form button {
+    margin: 0.4rem 0rem;
+    margin-top: 0rem;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+  /*Navbar*/
 
   nav .pag-name {
     display: none;

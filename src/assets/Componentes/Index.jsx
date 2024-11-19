@@ -1,6 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
+
 function Index() {
+  const handleItemClick = (nombre) => {
+    navigate(`/infoPlanes/${nombre}`);
+  };
   return (
     <>
       <header className="header-home" id="header-home">
@@ -140,7 +144,10 @@ function Index() {
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Eius quas qui sint vitae. Veniam, itaque.
                   </p>
-                  <a href="#" className="btn btn-card">
+                  <a
+                    onClick={() => handleItemClick("Cartagena de Indias")}
+                    className="btn btn-card"
+                  >
                     Más información
                   </a>
                 </div>

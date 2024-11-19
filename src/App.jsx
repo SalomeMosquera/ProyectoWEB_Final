@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./assets/Componentes/Navbar.jsx";
 import Inicio from "./assets/Componentes/Home.jsx";
 import Lugares from "./assets/Componentes/Lugares.jsx";
 import Nosotros from "./assets/Componentes/Nosotros.jsx";
 import InfoPlanes from "./assets/Componentes/InfoPlanes.jsx";
 import "./App.css";
 
-import Login from "./assets/Context/login.jsx";
+import Login from "./assets/Context/Login.jsx";
 import Register from "./assets/Context/Register.jsx";
-import { ToastContainer } from "react-toastify";
 
 function App() {
   // const [count, setCount] = useState(0);

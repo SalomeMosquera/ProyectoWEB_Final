@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [userDetails, setUserDetails] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const fetchUserData = async () => {
@@ -34,6 +35,10 @@ function Navbar() {
       console.error("Error al cerrar sesión: ", error.message);
     }
   }
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <>
@@ -69,16 +74,47 @@ function Navbar() {
                   </button>
                 </li>
               </div>
-              <button className="menu-btn">
-                <span
-                  className={"material-symbols-outlined"}
-                  style={{ fontSize: "1.8rem" }}
-                >
-                  menu
-                </span>
+              <button className="menu-btn" onClick={toggleMenu}>
+                {isMenuOpen ? (
+                  <span
+                    className="material-symbols-outlined"
+                    style={{ fontSize: "1.8rem" }}
+                  >
+                    close
+                  </span>
+                ) : (
+                  <span
+                    className="material-symbols-outlined"
+                    style={{ fontSize: "1.8rem" }}
+                  >
+                    menu
+                  </span>
+                )}
               </button>
             </ul>
           </nav>
+
+          {isMenuOpen && (
+            <div className="hamburger-menu">
+              <NavLink to="/home" activeclassname="active" onClick={toggleMenu}>
+                Inicio
+              </NavLink>
+              <NavLink
+                to="/lugares"
+                activeclassname="active"
+                onClick={toggleMenu}
+              >
+                Planes
+              </NavLink>
+              <NavLink
+                to="/nosotros"
+                activeclassname="active"
+                onClick={toggleMenu}
+              >
+                Nosotros
+              </NavLink>
+            </div>
+          )}
         </div>
       ) : (
         <div>
@@ -112,8 +148,47 @@ function Navbar() {
                   </button>
                 </li>
               </div>
+              <button className="menu-btn" onClick={toggleMenu}>
+                {isMenuOpen ? (
+                  <span
+                    className="material-symbols-outlined"
+                    style={{ fontSize: "1.8rem" }}
+                  >
+                    close
+                  </span>
+                ) : (
+                  <span
+                    className="material-symbols-outlined"
+                    style={{ fontSize: "1.8rem" }}
+                  >
+                    menu
+                  </span>
+                )}
+              </button>
             </ul>
           </nav>
+
+          {isMenuOpen && (
+            <div className="hamburger-menu">
+              <NavLink to="/home" activeclassname="active" onClick={toggleMenu}>
+                Inicio
+              </NavLink>
+              <NavLink
+                to="/lugares"
+                activeclassname="active"
+                onClick={toggleMenu}
+              >
+                Planes
+              </NavLink>
+              <NavLink
+                to="/nosotros"
+                activeclassname="active"
+                onClick={toggleMenu}
+              >
+                Nosotros
+              </NavLink>
+            </div>
+          )}
         </div>
       )}
     </>
