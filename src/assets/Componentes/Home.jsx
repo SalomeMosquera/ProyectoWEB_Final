@@ -1,8 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleItemClick = (nombre) => {
+    navigate(`/infoPlanes/${nombre}`);
+  };
+
   return (
     <>
       <Navbar />
@@ -151,9 +158,12 @@ const Home = () => {
                       increíble destino en la Sierra de la Macarena te ofrece
                       paisajes únicos que parecen sacados de otro mundo.
                     </p>
-                    <a href="#" className="btn btn-card">
+                    <button
+                      className="btn btn-card"
+                      onClick={() => handleItemClick("Caño Cristales")}
+                    >
                       Más información
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <div className="card">
@@ -169,9 +179,12 @@ const Home = () => {
                       icónicos de Colombia, donde la naturaleza y la astronomía
                       se encuentran en un espectáculo inolvidable.
                     </p>
-                    <a href="#" className="btn btn-card">
+                    <button
+                      className="btn btn-card"
+                      onClick={() => handleItemClick("Desierto de la Tatacoa")}
+                    >
                       Más información
-                    </a>
+                    </button>
                   </div>
                 </div>
                 <div className="card">
@@ -187,9 +200,12 @@ const Home = () => {
                       su riqueza natural, biodiversidad única, y la conexión con
                       comunidades indígenas ancestrales.
                     </p>
-                    <a href="#" className="btn btn-card">
+                    <button
+                      className="btn btn-card"
+                      onClick={() => handleItemClick("El Amazonas")}
+                    >
                       Más información
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>

@@ -15,7 +15,7 @@ function Nosotros() {
 
             <div className="about-info">
               <img
-                src="https://turismounipolar.com/wp-content/uploads/2022/04/Torre-Mirador-eje-cafetero.jpg"
+                src="https://visasencolombia.com/wp-content/uploads/2022/11/lugares-turisticos-para-visitar-colombia.jpg"
                 alt=""
                 className="bio-image"
               />
@@ -106,7 +106,7 @@ function Nosotros() {
                 <ul>
                   <li>
                     <img
-                      src="https://turismounipolar.com/wp-content/uploads/2022/04/Torre-Mirador-eje-cafetero.jpg"
+                      src="https://www.hubspot.com/hubfs/pa%CC%81ginas-testimoniales.png"
                       alt="Cliente 1"
                     />
                   </li>
@@ -124,7 +124,7 @@ function Nosotros() {
                 <ul>
                   <li>
                     <img
-                      src="https://turismounipolar.com/wp-content/uploads/2022/04/Torre-Mirador-eje-cafetero.jpg"
+                      src="https://images.ctfassets.net/vztl6s0hp3ro/4nq58wgJiVZ46Q8aTKNwaD/e1f8add3e499413fcc76c4759a9dd83d/7_types_of_employee_testimonials_to_attract_the_best_candidates.webp"
                       alt="Cliente 2"
                     />
                   </li>
@@ -142,7 +142,7 @@ function Nosotros() {
                 <ul>
                   <li>
                     <img
-                      src="https://turismounipolar.com/wp-content/uploads/2022/04/Torre-Mirador-eje-cafetero.jpg"
+                      src="https://img.freepik.com/foto-gratis/retrato-monocromatico-mujer-que-muestra-vulnerabilidad-auto-aceptacion_23-2151237387.jpg"
                       alt="Cliente 3"
                     />
                   </li>
@@ -160,7 +160,7 @@ function Nosotros() {
                 <ul>
                   <li>
                     <img
-                      src="https://turismounipolar.com/wp-content/uploads/2022/04/Torre-Mirador-eje-cafetero.jpg"
+                      src="https://media.istockphoto.com/id/1287647587/es/foto/retrato-de-un-joven-cauc%C3%A1sico-mixto-hombre-de-raza-en-la-ciudad-joven-mirando-a-la-c%C3%A1mara.jpg?s=612x612&w=0&k=20&c=XC9JRjyFVA8rFaZePvyTIn9RbEDUyX5F26jofTZSB0k="
                       alt="Cliente 1"
                     />
                   </li>

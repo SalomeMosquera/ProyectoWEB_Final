@@ -2,7 +2,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth, db } from "../Firebase/firebase";
 import { setDoc, doc } from "firebase/firestore";
-import { toast } from "react-toastify";
+
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 import { formValidate } from "../utils/formValidate";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -141,7 +142,10 @@ const Register = () => {
             </button>
           </div>
           <p className="register-text text-right">
-            ¿Ya tienes cuenta? <a href="/login">Login</a>
+            ¿Ya tienes cuenta?{" "}
+            <NavLink to="/login" activeclassname="active">
+              Login
+            </NavLink>
           </p>
         </form>
       </div>

@@ -1,11 +1,12 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../Firebase/firebase";
-import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { formValidate } from "../utils/formValidate";
 import { useForm } from "react-hook-form";
 import { erroresFirebase } from "../utils/erroresFirebase";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
+
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
 import FormError from "../Componentes/FormError";
@@ -93,8 +94,14 @@ const Login = () => {
             </button>
           </div>
           <p className="register-text text-right">
+            ¿No tiene una cuenta?{" "}
+            <NavLink to="/register" activeclassname="active">
+              Registrate Aquí
+            </NavLink>
+=======
             ¿No tiene una cuenta?
             <NavLink to="/register"> Registrate Aquí</NavLink>
+
           </p>
         </form>
       </div>
