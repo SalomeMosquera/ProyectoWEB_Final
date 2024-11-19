@@ -94,7 +94,7 @@ const Login = () => {
           </div>
           <p className="register-text text-right">
             ¿No tiene una cuenta?
-            <NavLink to="/registro"> Registrate Aquí</NavLink>
+            <NavLink to="/register"> Registrate Aquí</NavLink>
           </p>
         </form>
       </div>
