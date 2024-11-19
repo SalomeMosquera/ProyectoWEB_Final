@@ -7,7 +7,7 @@ import Nosotros from "./assets/Componentes/Nosotros.jsx";
 import InfoPlanes from "./assets/Componentes/InfoPlanes.jsx";
 import "./App.css";
 
-import Login from "./assets/Context/login.jsx";
+import Login from "./assets/Context/Login.jsx";
 import Register from "./assets/Context/Register.jsx";
 import { ToastContainer } from "react-toastify";
 

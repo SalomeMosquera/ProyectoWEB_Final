@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { formValidate } from "../utils/formValidate";
 import { useForm } from "react-hook-form";
 import { erroresFirebase } from "../utils/erroresFirebase";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
 import FormError from "../Componentes/FormError";
 import FormInput from "../Componentes/FormInput";
@@ -92,7 +93,8 @@ const Login = () => {
             </button>
           </div>
           <p className="register-text text-right">
-            ¿No tiene una cuenta? <a href="/register">Registrate Aquí</a>
+            ¿No tiene una cuenta?
+            <NavLink to="/lugares"> Registrate Aquí</NavLink>
           </p>
         </form>
       </div>
